@@ -1,3 +1,112 @@
-p.dayNumberText {
-  border: 3px solid red;
+.icon-weather-type {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-size: 1em;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer-helder.svg");
+}
+.icon-weather-type--mist_slip {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_mist-slip.svg");
+}
+.icon-weather-type--mist {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_mist.svg");
+}
+.icon-weather-type--sneeuw {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_sneeuw.svg");
+}
+.icon-weather-type--hagel {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_hagel.svg");
+}
+.icon-weather-type--regen {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_regen.svg");
+}
+.icon-weather-type--onweer {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_onweer.svg");
+}
+.icon-weather-type--helder_wolk_grijs {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_helder-wolk-grijs.svg");
+}
+.icon-weather-type--helder_wolk_grijs--nacht {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_nacht_helder-wolk-grijs.svg");
+}
+.icon-weather-type--wolk {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_wolk.svg");
+}
+.icon-weather-type--helder_wolk {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_helder-wolk.svg");
+}
+.icon-weather-type--helder_wolk--nacht {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_nacht_helder-wolk.svg");
+}
+.icon-weather-type--helder {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_helder.svg");
+}
+.icon-weather-type--helder--nacht {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_nacht_helder.svg");
+}
+.icon-weather-type--wind {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_wind.svg");
+}
+
+.icon-winddirection {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weather-winddirection-default.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: inline-block;
+  font-size: 1em;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.3em;
+}
+.icon-winddirection--ver {
+  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weather-winddirection-ver.svg");
+}
+.icon-winddirection--nno {
+  transform: rotate(-157.5deg);
+}
+.icon-winddirection--no {
+  transform: rotate(-135deg);
+}
+.icon-winddirection--ono {
+  transform: rotate(-112.5deg);
+}
+.icon-winddirection--o {
+  transform: rotate(-90deg);
+}
+.icon-winddirection--ozo {
+  transform: rotate(-67.5deg);
+}
+.icon-winddirection--zo {
+  transform: rotate(-45deg);
+}
+.icon-winddirection--zzo {
+  transform: rotate(-22.5deg);
+}
+.icon-winddirection--zzw {
+  transform: rotate(22.5deg);
+}
+.icon-winddirection--zw {
+  transform: rotate(45deg);
+}
+.icon-winddirection--wzw {
+  transform: rotate(67.5deg);
+}
+.icon-winddirection--w {
+  transform: rotate(90deg);
+}
+.icon-winddirection--wnw {
+  transform: rotate(112.5deg);
+}
+.icon-winddirection--nw {
+  transform: rotate(135deg);
+}
+.icon-winddirection--nnw {
+  transform: rotate(157.5deg);
+}
+.icon-winddirection--n {
+  transform: rotate(180deg);
 }
