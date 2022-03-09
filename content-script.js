@@ -1,15 +1,28 @@
 const ENDPOINT = "https://vrtnws-api.vrt.be/weather/forecasts/belgische_streken"
+const WEBSITE = "https://www.vrt.be/vrtnws/nl/services/weer/"
 const LOCATION = "Centrum"
 
 const fetchWeatherData = async () => {
   return await fetch(ENDPOINT)
     .then(r => r.json())
-    .then(data => data.forecasts.filter(forecast => forecast.location === LOCATION && forecast.timeRange === 24))
+    .then(data => data.forecasts.filter(forecast => forecast.location === LOCATION))
+}
+
+const getDate = (day) => {
+  let date = new Date(day.beginDate)
+
+  if (day.timeRange === 24) {
+    const newDate = new Date(Number(date))
+    newDate.setDate(date.getDate() + 1)
+    date = newDate
+  }
+
+  return date.toISOString().substring(0, 10)
 }
 
 const insertWeatherData = (weatherData) => {
   weatherData.forEach(day => {
-    const date = day.beginDate.substring(0, 10)
+    const date = getDate(day)
     const dateContainer = document.querySelectorAll(`[data-date="${date}"]`)[0]
     const dateTitle = dateContainer.getElementsByClassName("dayNumberText")[0]
 
@@ -18,12 +31,14 @@ const insertWeatherData = (weatherData) => {
     if (!!document.getElementById(id)) return
 
     const weatherNode = `
-      <div id="${id}">
+      <a id="${id}" class="weather-container" href="${WEBSITE}" target="_blank">
         <span class="icon-weather-type icon-weather-type--${day.weathertype}"></span>
-        <span>${day.temperature.minimum} - ${day.temperature.maximum}</span>
-        <span class="icon-winddirection icon-winddirection--${day.wind.direction.toLowerCase()}"></span>
-        <span>${day.wind.speed1}</span>
-      </div>
+        <span class="temperature"><span class="temperature-hi">${day.temperature.maximum || "–"}°</span> <span class="temperature-lo">${day.temperature.minimum}°</span></span>
+        <div class="wind-container">
+          <span class="icon-winddirection icon-winddirection--${day.wind.direction.toLowerCase()}"></span>
+          <span class="wind-speed">${day.wind.speed1}${day.wind.speed2 ? `-${day.wind.speed2}` : ""}</span>
+        </div>
+      </a>
     `
 
     dateTitle.insertAdjacentHTML('afterend', weatherNode);
@@ -32,6 +47,7 @@ const insertWeatherData = (weatherData) => {
 
 (async () => {
   const weatherData = await fetchWeatherData()
+  console.log({ weatherData })
 
   var obs = new MutationObserver(() => {
     insertWeatherData(weatherData)

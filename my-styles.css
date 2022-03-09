@@ -1,8 +1,35 @@
+/* overwrites */
+/* .calendar .dayNumberContainer {
+  height: 32px;
+} */
+
+/* inserted */
+.weather-container {
+  display: flex;
+  align-items: flex-end;
+  font-size: 10px;
+  margin-left: 4px;
+  text-decoration: none;
+  color: black;
+}
+
+.weather-container:hover {
+  color: black;
+}
+
+.temperature-hi {
+  font-size: 12px;
+}
+
+.temperature,
+.wind-speed {
+  margin-left: 4px;
+}
+
 .icon-weather-type {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  font-size: 1em;
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -57,10 +84,8 @@
   background-size: contain;
   background-position: center center;
   display: inline-block;
-  font-size: 1em;
-  width: 20px;
-  height: 20px;
-  margin-right: 0.3em;
+  width: 14px;
+  height: 14px;
 }
 .icon-winddirection--ver {
   background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weather-winddirection-ver.svg");
