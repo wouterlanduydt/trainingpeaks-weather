@@ -33,11 +33,6 @@ const insertWeatherData = (weatherData) => {
     const weatherNode = `
       <a id="${id}" class="weather-container" href="${WEBSITE}" target="_blank">
         <span class="icon-weather-type icon-weather-type--${day.weathertype}"></span>
-        <span class="temperature"><span class="temperature-hi">${day.temperature.maximum || "–"}°</span> <span class="temperature-lo">${day.temperature.minimum}°</span></span>
-        <div class="wind-container">
-          <span class="icon-winddirection icon-winddirection--${day.wind.direction.toLowerCase()}"></span>
-          <span class="wind-speed">${day.wind.speed1}${day.wind.speed2 ? `-${day.wind.speed2}` : ""}</span>
-        </div>
       </a>
     `
 
