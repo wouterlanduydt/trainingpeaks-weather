@@ -1,7 +1,11 @@
 /* overwrites */
-/* .calendar .dayNumberContainer {
-  height: 32px;
-} */
+.calendar .dayNumberContainer {
+  height: 32px !important;
+}
+
+.calendar .todayLabel {
+  display: none;
+}
 
 /* inserted */
 .weather-container {
@@ -30,8 +34,8 @@
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   display: inline-block;
   background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer-helder.svg");
 }
