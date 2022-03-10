@@ -3,6 +3,14 @@
   height: 32px !important;
 }
 
+.calendar
+  .thisWeek
+  .dayNumberContainer.today
+  .weather-container
+  .weather-container-details {
+  filter: invert(1);
+}
+
 .calendar .todayLabel {
   display: none;
 }
@@ -11,7 +19,7 @@
 .weather-container {
   display: flex;
   align-items: flex-end;
-  font-size: 10px;
+  font-size: 9px;
   margin-left: 4px;
   text-decoration: none;
   color: black;
@@ -21,13 +29,20 @@
   color: black;
 }
 
-.temperature-hi {
-  font-size: 12px;
+.wind-container {
+  font-family: "HelveticaNeueW01-75Bold";
+  display: flex;
+  align-items: center;
 }
 
-.temperature,
-.wind-speed {
-  margin-left: 4px;
+.temp {
+  font-family: "HelveticaNeueW01-75Bold";
+  font-size: 10px;
+}
+
+.temp-min {
+  font-family: "HelveticaNeueW01-45Ligh";
+  font-size: 9px;
 }
 
 .icon-weather-type {
@@ -38,6 +53,7 @@
   height: 24px;
   display: inline-block;
   background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer-helder.svg");
+  margin-right: 2px;
 }
 .icon-weather-type--mist_slip {
   background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weer_mist-slip.svg");
@@ -83,16 +99,17 @@
 }
 
 .icon-winddirection {
-  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weather-winddirection-default.svg");
+  background-image: url("https://svgshare.com/i/f1e.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
+  margin-right: 2px;
 }
 .icon-winddirection--ver {
-  background-image: url("https://www.vrt.be/etc.clientlibs/vrtnieuws/clientlibs/clientlib-v2-site/resources/images/weather-winddirection-ver.svg");
+  background-image: url("https://svgshare.com/i/f31.svg");
 }
 .icon-winddirection--nno {
   transform: rotate(-157.5deg);
